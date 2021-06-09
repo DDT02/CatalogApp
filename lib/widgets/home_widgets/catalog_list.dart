@@ -41,9 +41,9 @@ class CatalogItem extends StatelessWidget {
       children: [
         Hero(
           tag: Key(catalog.id.toString()),
-         child: CatalogImage(
-          image: catalog.image,
-        ),
+          child: CatalogImage(
+            image: catalog.image,
+          ),
         ),
         Expanded(
             child: Column(
