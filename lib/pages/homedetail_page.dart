@@ -15,9 +15,9 @@ class HomeDetailpage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -25,8 +25,8 @@ class HomeDetailpage extends StatelessWidget {
             ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(MyTheme.darkbluishColor),
+                        backgroundColor: MaterialStateProperty.all(
+                            context.theme.buttonColor),
                         shape: MaterialStateProperty.all(
                           StadiumBorder(),
                         )),
@@ -49,12 +49,12 @@ class HomeDetailpage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                    color: Colors.white,
+                    color: context.cardColor,
                     width: context.screenWidth,
                     child: Column(
                       children: [
                         catalog.name.text.bold.xl2
-                            .color(MyTheme.darkbluishColor)
+                            .color(context.accentColor)
                             .make(),
                         catalog.desc.text.xl.make(),
                         "Irure consequat dolor sint nisi aliquip voluptate est in dolore esse sint non pariatur."
